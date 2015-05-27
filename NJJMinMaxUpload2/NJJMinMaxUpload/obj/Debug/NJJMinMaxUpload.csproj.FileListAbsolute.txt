@@ -21,3 +21,13 @@ C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinM
 C:\Users\USER\Documents\JR\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.config
 C:\Users\USER\Documents\JR\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe
 C:\Users\USER\Documents\JR\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.pdb
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.config
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.pdb
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.manifest
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.application
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.pdb
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe.manifest
+C:\Users\USER\Desktop\NJJMinMax\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.application

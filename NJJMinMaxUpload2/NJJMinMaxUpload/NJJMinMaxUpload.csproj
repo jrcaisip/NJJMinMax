@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>63C722348E713A173A0580BCC3AA30309ADDE7BA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>335BF37D8508D6AF0384EBD0EE8FF4F1DABB06AA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>NJJMinMaxUpload_TemporaryKey.pfx</ManifestKeyFile>

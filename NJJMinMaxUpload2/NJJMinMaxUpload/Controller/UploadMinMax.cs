@@ -20,8 +20,6 @@ namespace NJJMinMaxUpload.Controller
         private OdbcCommand delCmd;
         private OdbcCommand preCmd;
 
-        private int flag = 0;
-
         //ODBC connection to the WebSales
         private String connetionString = @"Provider=MSDASQL;Driver={MySQL ODBC 5.1 Driver};
                     Server=aetuser.db.8363057.hostedresource.com;
@@ -109,7 +107,6 @@ namespace NJJMinMaxUpload.Controller
                 {
                     Connect();
                     ContinueUpload((int)rk.GetValue("index"));
-                    flag = 0;
                 }
             }
         }
@@ -139,9 +136,7 @@ namespace NJJMinMaxUpload.Controller
                 
                 if (ex is OdbcException || ex is InvalidOperationException)
                 {
-                    cnn.Close();
                     Connect();
-                    flag = 0;
                     ContinueUpload((int)rk.GetValue("index"));
                 }   
             }
@@ -150,10 +145,21 @@ namespace NJJMinMaxUpload.Controller
         //Connect / Reconnect method
         public void Connect()
         {
-                cnn.Open();
-                flag = 1;
-                Console.Write("Connecting!");
-                if (flag == 1) return;
+            int flag = 0;
+
+            while (flag == 0)
+            {
+                try
+                {
+                    cnn.Open();
+                    Console.Write("Connecting!");
+                    flag = 1;
+                }
+                catch (Exception ex)
+                {
+                    flag = 0;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,23 @@
+c:\users\dummy-server\documents\visual studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.config
+c:\users\dummy-server\documents\visual studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe
+c:\users\dummy-server\documents\visual studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.pdb
+c:\users\dummy-server\documents\visual studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe
+c:\users\dummy-server\documents\visual studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.pdb
+C:\Users\DUMMY-SERVER\Documents\Visual Studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.manifest
+C:\Users\DUMMY-SERVER\Documents\Visual Studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.application
+C:\Users\DUMMY-SERVER\Documents\Visual Studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe.manifest
+C:\Users\DUMMY-SERVER\Documents\Visual Studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.application
+C:\Users\DUMMY-SERVER\Documents\Visual Studio 2013\Projects\NJJMinMaxUpload\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.csprojResolveAssemblyReference.cache
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.config
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.pdb
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.csprojResolveAssemblyReference.cache
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.manifest
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.application
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.pdb
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe.manifest
+C:\Users\DUMMY-SERVER\Desktop\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.application
+C:\Users\USER\Documents\JR\NJJMinMaxUpload2\NJJMinMaxUpload\bin\Debug\NJJMinMaxUpload.exe.config
+C:\Users\USER\Documents\JR\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.exe
+C:\Users\USER\Documents\JR\NJJMinMaxUpload2\NJJMinMaxUpload\obj\Debug\NJJMinMaxUpload.pdb

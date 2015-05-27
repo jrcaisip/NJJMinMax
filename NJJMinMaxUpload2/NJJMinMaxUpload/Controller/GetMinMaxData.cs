@@ -27,17 +27,13 @@ namespace NJJMinMaxUpload.Controller
             
             //Connection String
             string connetionString = null;
-            connetionString = //"Server=localhost;Database=AralcoBOS;Integrated Security=SSPI";
+            connetionString = "Server=localhost;Database=AralcoBOS;Integrated Security=SSPI";
                 
                /* "Data Source= 10.0.1.6"+
             "Initial Catalog=AralcoBOS;" +
             "User id=eti;" +
             "Password=enigmatech1_2015;";*/
                 
-                
-                
-                
-
             cnn = new SqlConnection(connetionString);
             dataStorage = new DataSet();
             adp = new SqlDataAdapter();

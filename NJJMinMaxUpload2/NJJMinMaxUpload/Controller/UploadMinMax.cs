@@ -62,6 +62,13 @@ namespace NJJMinMaxUpload.Controller
 
                     Console.WriteLine("Uploading Data to web DB \n");
 
+                    if (rk.GetValue("index") == null)
+                    {
+                        RegistryKey rk = Registry.CurrentUser.CreateSubKey("indexForUpload");
+                        rk.SetValue("index", 0);
+                    }
+
+
                     //if the registry key is equal to zero it will start a new upload otherwise it will call the continue upload
                     //passing the last index saved in the registry
                     if ((int)rk.GetValue("index") == 0)

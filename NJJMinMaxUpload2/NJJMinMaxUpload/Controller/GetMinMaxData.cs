@@ -27,12 +27,16 @@ namespace NJJMinMaxUpload.Controller
             
             //Connection String
             string connetionString = null;
-            connetionString = "Server=localhost;Database=AralcoBOS_Dummy;Integrated Security=SSPI";
+            connetionString = //"Server=localhost;Database=AralcoBOS;Integrated Security=SSPI";
                 
-                /*"Data Source= DUMMYSERVER"+
-            "Initial Catalog=AralcoBOS_Dummy;" +
+               /* "Data Source= 10.0.1.6"+
+            "Initial Catalog=AralcoBOS;" +
             "User id=eti;" +
             "Password=enigmatech1_2015;";*/
+                
+                
+                
+                
 
             cnn = new SqlConnection(connetionString);
             dataStorage = new DataSet();
@@ -43,12 +47,12 @@ namespace NJJMinMaxUpload.Controller
 				ISNULL( CAST(e.Code AS varchar), '103') AS SoldFrom,
 				ISNULL(CAST(ABS(SUM(a.Quantity))AS INT),0) AS TotalSoldQty,
                 ISNULL (CAST(MAX(c.TransacDate) AS varchar),'2015-06-02') AS LastTransacDate
-              FROM [AralcOBOS_Dummy].[dbo].[vwInvProduct] AS b
-              LEFT OUTER JOIN [AralcOBOS_Dummy].[dbo].[vwSaleTransaction] AS a
+              FROM [AralcoBOS].[dbo].[vwInvProduct] AS b
+              LEFT OUTER JOIN [AralcoBOS].[dbo].[vwSaleTransaction] AS a
               ON a.ProductId = b.ProductID
-              LEFT OUTER JOIN [AralcOBOS_Dummy].[dbo].[vwSaleTransactions] AS c
+              LEFT OUTER JOIN [AralcoBOS].[dbo].[vwSaleTransactions] AS c
               ON a.POSTransItemID = c.POSTransItemID
-              LEFT OUTER JOIN [AralcOBOS_Dummy].[dbo].Store AS e
+              LEFT OUTER JOIN [AralcoBOS].[dbo].Store AS e
               ON a.StoreID = e.StoreID
               GROUP BY b.ProductCode, b.ProductID, b.name, e.code
 			  ORDER BY ProductCode";
@@ -56,10 +60,10 @@ namespace NJJMinMaxUpload.Controller
             invQuery = @"SELECT a1.ProductCode,
 		                        a1.Name,
                         CAST(SUM(b1.Quantity) AS int) AS TotalInvQty
-                        FROM [AralcoBOS_Dummy].[dbo].[vwInvProduct] AS a1
-                        LEFT OUTER JOIN [AralcoBOS_Dummy].[dbo].[vwInventoryTotals] AS b1
+                        FROM [AralcoBOS].[dbo].[vwInvProduct] AS a1
+                        LEFT OUTER JOIN [AralcoBOS].[dbo].[vwInventoryTotals] AS b1
                         ON a1.ProductID = b1.ProductID
-                        LEFT OUTER JOIN [AralcoBOS_Dummy].[dbo].[Store] AS c1
+                        LEFT OUTER JOIN [AralcoBOS].[dbo].[Store] AS c1
                         ON b1.StoreID = c1.StoreID
                         WHERE c1.code IN ('101','102','103')
                         GROUP BY a1.ProductCode, a1.name

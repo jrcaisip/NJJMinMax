@@ -150,10 +150,16 @@ namespace NJJMinMaxUpload.Controller
         //Connect / Reconnect method
         public void Connect()
         {
+            try
+            {
                 cnn.Open();
-                flag = 1;
                 Console.Write("Connecting!");
-                if (flag == 1) return;
+            }
+            catch (Exception ex)
+            {
+                if (ex is OdbcException)
+                cnn.Open();
+            }
         }
     }
 }

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NJJMinMaxUpload.exe" size="18928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NJJMinMaxUpload.exe" size="18840">
       <assemblyIdentity name="NJJMinMaxUpload" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JPPx+8pJnTaho8tf7v782RX7HkoOR7UFFrEtHdJVSbg=</dsig:DigestValue>
+        <dsig:DigestValue>J7VooVtxy4I9tlYSlr91eKkAwtiP7cGUi2uxdxgWIUA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

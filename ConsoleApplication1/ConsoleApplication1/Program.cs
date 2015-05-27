@@ -10,6 +10,11 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            int x;
+
+            x = 0001;
+
+            Console.Write(x);
         }
     }
 }

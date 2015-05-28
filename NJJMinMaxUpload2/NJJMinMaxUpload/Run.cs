@@ -18,8 +18,8 @@ namespace NJJMinMaxUpload
         public static void Main()
         {
             SpinAnimation.Start(50);
-            //RegistryKey rk = Registry.CurrentUser.CreateSubKey("indexForUpload");
-            //rk.SetValue("index", 0);
+            RegistryKey rk = Registry.CurrentUser.CreateSubKey("indexForUpload");
+            rk.SetValue("index", 0);
             UploadMinMax um = new UploadMinMax();
             SpinAnimation.Stop();
         }

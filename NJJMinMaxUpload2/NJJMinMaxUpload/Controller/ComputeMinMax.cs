@@ -32,7 +32,7 @@ namespace NJJMinMaxUpload.Controller
                 max = q._TotalSoldQty / 4; // <--- sample computation of  min + 3 days of stocking c/o Kuya Olive--->
 
                 //Adds minmax value of each product to MinMax list of MinMax object
-                mm.Add(new MinMax() { _ProductCode = q._ProductCode, _Max = max, _Min = min, _LastTransacDate = q._LastTransacDate, _StoreCode = q._StoreCode});
+                mm.Add(new MinMax() { _ProductCode = q._ProductCode, _Name = q._ProductName,_Max = max, _Min = min, _LastTransacDate = q._LastTransacDate, _StoreCode = q._StoreCode});
             }
 
             for (int i = 0; i < qi.Count; i++)

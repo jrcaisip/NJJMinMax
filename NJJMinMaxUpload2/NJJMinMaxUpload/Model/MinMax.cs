@@ -9,6 +9,7 @@ namespace NJJMinMaxUpload.Model
     public class MinMax
     {
         public String _ProductCode {get; set;}
+        public String _Name { get; set; }
         public int _Min {get; set;}
         public int _Max {get; set;}
         public String _LastTransacDate { get; set; }

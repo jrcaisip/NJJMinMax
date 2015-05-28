@@ -55,7 +55,7 @@ namespace NJJMinMaxUpload.Controller
                     preCmd.ExecuteNonQuery();
                     //Insert Query
                     iq = @"INSERT INTO njjminmax (Product_Code, Last_Trans_Date, Current_Inventory, Min, Max,Store_Code)
-                    VALUES (?,?,?,?,?,?)";
+                    VALUES (?,?,?,?,?,?,?)";
 
                     insCmd = new OdbcCommand(iq, cnn);
                     insCmd.CommandTimeout = 30;
@@ -64,10 +64,8 @@ namespace NJJMinMaxUpload.Controller
 
                     if (rk.GetValue("index") == null)
                     {
-                        RegistryKey rk = Registry.CurrentUser.CreateSubKey("indexForUpload");
                         rk.SetValue("index", 0);
                     }
-
 
                     //if the registry key is equal to zero it will start a new upload otherwise it will call the continue upload
                     //passing the last index saved in the registry
@@ -97,6 +95,7 @@ namespace NJJMinMaxUpload.Controller
                 for (int i = 0; i != mm.pubMm.Count; i++)
                 {
                     insCmd.Parameters.AddWithValue("Product_Code", mm.pubMm[i]._ProductCode);
+                    insCmd.Parameters.AddWithValue("Product_Name", mm.pubMm[i]._Name);
                     insCmd.Parameters.AddWithValue("Last_Trans_date", mm.pubMm[i]._LastTransacDate);
                     insCmd.Parameters.AddWithValue("Current_Inventory", mm.pubMm[i]._InvQuantity);
                     insCmd.Parameters.AddWithValue("Min", mm.pubMm[i]._Min);

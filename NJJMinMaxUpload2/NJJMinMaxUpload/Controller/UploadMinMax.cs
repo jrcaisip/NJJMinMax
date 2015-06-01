@@ -16,7 +16,7 @@ namespace NJJMinMaxUpload.Controller
         private RegistryKey rk = Registry.CurrentUser.CreateSubKey("indexForUpload");
 
         private OdbcConnection cnn;
-        private OdbcCommand insCmd;
+        private OdbcCommand insCmd;             
         private OdbcCommand delCmd;
         private OdbcCommand preCmd;
 
@@ -34,6 +34,7 @@ namespace NJJMinMaxUpload.Controller
             //gets the data from the database and computes the minmax
             mm = new ComputeMinMax(gd.getSalesList,gd.getInvList);
             cnn = new OdbcConnection(connetionString);
+
 
             Connect();
 
@@ -54,16 +55,15 @@ namespace NJJMinMaxUpload.Controller
                     preCmd = new OdbcCommand("ALTER TABLE njjminmax AUTO_INCREMENT = 1", cnn);
                     preCmd.ExecuteNonQuery();
                     //Insert Query
-                    iq = @"INSERT INTO njjminmax (Product_Code, Last_Trans_Date, Current_Inventory, Min, Max,Store_Code)
+                    iq = @"INSERT INTO njjminmax (Product_Name, Product_Code, Last_Trans_Date, Current_Inventory, Min, Max,Store_Code)
                     VALUES (?,?,?,?,?,?,?)";
-
-                    insCmd = new OdbcCommand(iq, cnn);
-                    insCmd.CommandTimeout = 30;
-
+                    
                     Console.WriteLine("Uploading Data to web DB \n");
 
                     //if the registry key is equal to zero it will start a new upload otherwise it will call the continue upload
                     //passing the last index saved in the registry
+                    insCmd = new OdbcCommand(iq, cnn);
+
                     if ((int)rk.GetValue("index") == 0)
                         NewUpload();
                     else
@@ -89,14 +89,23 @@ namespace NJJMinMaxUpload.Controller
             {
                 for (int i = 0; i != mm.pubMm.Count; i++)
                 {
-                    insCmd.Parameters.AddWithValue("Product_Code", mm.pubMm[i]._ProductCode);
                     insCmd.Parameters.AddWithValue("Product_Name", mm.pubMm[i]._Name);
+                    Console.Write('1');
+                    insCmd.Parameters.AddWithValue("Product_Code", mm.pubMm[i]._ProductCode);
+                    Console.Write('2');
+                    Console.Write('3');
                     insCmd.Parameters.AddWithValue("Last_Trans_date", mm.pubMm[i]._LastTransacDate);
+                    Console.Write('4');
                     insCmd.Parameters.AddWithValue("Current_Inventory", mm.pubMm[i]._InvQuantity);
+                    Console.Write('5');
                     insCmd.Parameters.AddWithValue("Min", mm.pubMm[i]._Min);
+                    Console.Write('6');
                     insCmd.Parameters.AddWithValue("Max", mm.pubMm[i]._Max);
+                    Console.Write('7');
                     insCmd.Parameters.AddWithValue("Store_Code", mm.pubMm[i]._StoreCode);
+                    Console.Write('8');
                     insCmd.ExecuteNonQuery();
+                    Console.Write('9');
                     insCmd.Parameters.Clear();
                     rk.SetValue("index", i);
                     Console.Clear();
@@ -104,11 +113,13 @@ namespace NJJMinMaxUpload.Controller
                 }
             }catch (Exception ex)
             {
-                if (ex is OdbcException || ex is InvalidOperationException)
+                if (ex is OdbcException)
                 {
                     Connect();
                     ContinueUpload((int)rk.GetValue("index"));
                 }
+
+                Console.Write(ex);
             }
         }
 
@@ -119,6 +130,7 @@ namespace NJJMinMaxUpload.Controller
             {
                 for (int i = index; i != mm.pubMm.Count; i++)
                 {
+                    insCmd.Parameters.AddWithValue("Product_Name", mm.pubMm[i]._Name);
                     insCmd.Parameters.AddWithValue("Product_Code", mm.pubMm[i]._ProductCode);
                     insCmd.Parameters.AddWithValue("Last_Trans_date", mm.pubMm[i]._LastTransacDate);
                     insCmd.Parameters.AddWithValue("Current_Inventory", mm.pubMm[i]._InvQuantity);
@@ -154,6 +166,7 @@ namespace NJJMinMaxUpload.Controller
                 {
                     cnn.Open();
                     Console.Write("Connecting!");
+                    Console.Write("loop test");
                     flag = 1;
                 }
                 catch (Exception ex)

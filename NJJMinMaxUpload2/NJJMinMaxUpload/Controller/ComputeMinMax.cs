@@ -15,12 +15,14 @@ namespace NJJMinMaxUpload.Controller
         private List<MinMax> mm;
         private int min;
         private int max;
+        int i;
 
 
         public ComputeMinMax(List<SalesQueryData> qs, List<InventoryQueryData>qi)
         {
             mm = new List<MinMax>();
 
+            Console.Write("Computing Minmax...");
             foreach(SalesQueryData q in qs)
             {
                 max = 0;
@@ -35,14 +37,23 @@ namespace NJJMinMaxUpload.Controller
                 mm.Add(new MinMax() { _ProductCode = q._ProductCode, _Name = q._ProductName,_Max = max, _Min = min, _LastTransacDate = q._LastTransacDate, _StoreCode = q._StoreCode});
             }
 
-            for (int i = 0; i < qi.Count; i++)
+           /* for (int i = 0; i < qi.Count; i++)
             {
                 if (mm[i]._ProductCode == qi[i]._ProductCode)
                     mm[i]._InvQuantity = qi[i]._TotalInvQty;
 
                 else mm[i]._InvQuantity = "0";
-            }
+            }*/
 
+            foreach(InventoryQueryData iqd in qi)
+            {
+               i = 0;
+                while(mm[i]._ProductCode != iqd._ProductCode)
+                {
+                    i++;
+                }
+                mm[i]._InvQuantity = iqd._TotalInvQty;
+            }
         }
 
         //to access mm list publicly

@@ -10,6 +10,6 @@ namespace NJJMinMaxUpload.Model
     {
         public String _ProductCode;
         public String _ProductName;
-        public String _TotalInvQty;
+        public int _TotalInvQty;
     }
 }

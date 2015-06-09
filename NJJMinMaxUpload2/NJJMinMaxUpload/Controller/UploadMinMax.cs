@@ -12,9 +12,9 @@ namespace NJJMinMaxUpload.Controller
 {
     class UploadMinMax
     {
-        private ComputeMinMax mm;
-        private RegistryKey rk = Registry.CurrentUser.CreateSubKey("indexForUpload");
+        public static RegistryKey rk = Registry.CurrentUser.CreateSubKey("indexForUpload");
 
+        private ComputeMinMax mm;
         private OdbcConnection cnn;
         private OdbcCommand insCmd;             
         private OdbcCommand delCmd;
@@ -108,7 +108,7 @@ namespace NJJMinMaxUpload.Controller
                     Console.Write('9');
                     insCmd.Parameters.Clear();
                     rk.SetValue("index", i);
-                    Console.Clear();
+
                     Console.WriteLine("Records update! Total rows Updated " + (i+1) + " out of " + mm.pubMm.Count + "\n");
                 }
             }catch (Exception ex)

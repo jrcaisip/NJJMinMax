@@ -62,6 +62,7 @@ namespace NJJMinMaxUpload.Controller
                         LEFT OUTER JOIN [AralcoBOS].[dbo].[Store] AS c1
                         ON b1.StoreID = c1.StoreID
                         WHERE c1.code IN ('0001','01')
+                        AND a1.DeActivateInventory = 0
                         GROUP BY a1.ProductCode, a1.name
                         ORDER BY ProductCode";
 

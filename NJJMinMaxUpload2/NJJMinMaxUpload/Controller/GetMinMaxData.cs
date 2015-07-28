@@ -13,7 +13,7 @@ namespace NJJMinMaxUpload.Controller
     {
         private List<SalesQueryData> qs;
         private List<InventoryQueryData> qi;
-        DateTime dateDiff;
+        DateTime dateDiff; //not used, "DateDiff" already incorporated in the SQL Query
         private String salesQuery;
         private String invQuery;
         private String scode = "01"; //Change for actual store data

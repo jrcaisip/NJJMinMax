@@ -38,6 +38,9 @@ namespace NJJMinMaxUpload.Controller
             dataStorage = new DataSet();
             adp = new SqlDataAdapter();
 
+            //Gives the date 90 days before today
+            dateDiff = DateTime.Now.Subtract(TimeSpan.FromDays(90));
+
             salesQuery = @"SELECT b.ProductCode,
 	            b.Name,
 				ISNULL(CAST(e.Code AS varchar), '01') AS SoldFrom,
@@ -50,6 +53,7 @@ namespace NJJMinMaxUpload.Controller
               ON a.POSTransItemID = c.POSTransItemID
               LEFT OUTER JOIN [AralcoBOS].[dbo].Store AS e
               ON a.StoreID = e.StoreID
+              WHERE c.TransacDate > DATEADD(DAY, -90, GETDATE())
               GROUP BY b.ProductCode, b.ProductID, b.name, e.code
 			  ORDER BY ProductCode";
 
@@ -65,8 +69,7 @@ namespace NJJMinMaxUpload.Controller
                         GROUP BY a1.ProductCode, a1.name
                         ORDER BY ProductCode";
 
-            //Gives the date 90 days before today
-            dateDiff = DateTime.Now.Subtract(TimeSpan.FromDays(90));
+            
 
             try
             {
